@@ -14,7 +14,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return const Scaffold(
       body: Stack(
         children: [
+
           RiveAnimation.asset("assets/RiveAssets/shapes.riv"),
+          
         ],
       ),
     );
