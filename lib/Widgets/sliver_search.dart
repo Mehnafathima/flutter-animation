@@ -30,8 +30,10 @@ class SearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
+      
       padding: kPadding,
       child: Container(
+        
         margin: EdgeInsets.zero,
         color: Colors.transparent,
         child: Container(
@@ -45,25 +47,26 @@ class SearchBar extends StatelessWidget {
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
-            child: TextFormField(
-              textAlignVertical: TextAlignVertical.center,
-              decoration: const InputDecoration(
-                contentPadding: EdgeInsets.only(top: 12.0),
-                enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.transparent),
+            child: Row(
+              children: [
+                const SizedBox(width: 12), // Empty space to vertically center the hint text
+                const Icon(
+                  Icons.search,
+                  color: Colors.grey,
                 ),
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.transparent),
-                ),
-                prefixIcon: Padding(
-                  padding: EdgeInsets.only(top: 12.0),
-                  child: Icon(
-                    Icons.search,
-                    color: Colors.grey,
+                const SizedBox(width: 8,),
+                Expanded(
+                  child: TextFormField(
+                    textAlignVertical: TextAlignVertical.center,
+                    decoration: const InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'Search your favourite.',
+                      hintStyle: TextStyle(
+                      ),
+                    ),
                   ),
                 ),
-                hintText: 'Restaurants or dish...',
-              ),
+              ],
             ),
           ),
         ),
