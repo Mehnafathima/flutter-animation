@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   rive: ^0.9.1
   flutter_svg: ^1.1.6
+  shimmer_animation: ^2.1.0
+
 
 dev_dependencies:
   flutter_test:
@@ -65,7 +67,7 @@ flutter:
     - assets/Backgrounds/
     - assets/icons/
     - assets/RiveAssets/
-  #   - images/a_dot_ham.jpeg
+    - assets/images/banner.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
